@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -19,26 +19,36 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     @if (!User.Identity.IsAuthenticated)
                     {
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-page="/Account/Register">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-page="/Account/Login">Login</a>
-                            </li>
-                        </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Account/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Account/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/AngularLogin">JWT Login</a>
+                        </li>
+                    </ul>
+                      
+                          
+                    
                     }
                     else
                     {
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-page="/Account/Register">Welcome @User.Identity.Name</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-page="/Account/Logout">Logout</a>
-                            </li>
-                        </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Account/Register">Welcome @User.Identity.Name</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Account/Logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/AngularLogin">JWT Login</a>
+                        </li>
+                    </ul>
                     }
+
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
@@ -62,13 +72,16 @@
             &copy; 2022 - LoginWebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/bundle/dist/runtime.js" type="module"></script>
     <script src="~/bundle/dist/polyfills.js" type="module"></script>
     <script src="~/bundle/dist/vendor.js" type="module"></script>
     <script src="~/bundle/dist/main.js" type="module"></script>
+    <script src="~/bundle/dist/runtime.e9bb7a23fbe4387c.js" type="module"></script>
+    <script src="~/bundle/dist/polyfills.38bb67157a257b16.js" type="module"></script>
+    <script src="~/bundle/dist/main.6a85057bd710072c.js" type="module"></script>
     <script src="js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
