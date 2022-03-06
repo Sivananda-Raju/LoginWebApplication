@@ -13,4 +13,6 @@ export class AuthserviceService {
     console.log(data);
     return this.http.post(`${baseUrl}authenticate`, data);
   }
+
+
 }
